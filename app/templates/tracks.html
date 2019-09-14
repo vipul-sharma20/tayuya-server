@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form id="tracks" action="/tabs/" method="POST" accept-charset="utf-8">
+        {% csrf_token %}
+        <label>Choose a track from this MIDI file</label><br>
+        <select name="track">
+        {% for track in data %}
+            <option value="{{ forloop.counter0 }}">{{ track }}</option>
+        {% endfor %}
+        </select>
+        <input type="submit">
+        <p><i>Note: May take some time to render</i><p>
+    </form>
+    <hr>
+{% endblock content %}

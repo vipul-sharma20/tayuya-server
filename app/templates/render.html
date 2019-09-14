@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form id="midi_upload" action="/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="avatar">Choose a MIDI file:</label>
+
+        <input type="file" id="midi" name="midi" accept='.mid,.midi'>
+        <input type="submit">
+    </form>
+    <hr>
+    <div id="tab">
+        <a href="#" onclick="history.back();">Choose a different MIDI track from this file</a>
+        <h1>{{ name }}</h1>
+    {% for alternative in alternatives %}
+        {% for split in alternative %}
+        <div class="jtab tabonly">{% for note in split %} ${{ note.1 }} {{ note.2 }} {% endfor %} ||</div>
+        <br>
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endblock content %}

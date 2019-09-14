@@ -1,0 +1,32 @@
+.tabs {
+    text-align: center;
+}
+
+#wrapper {
+    min-height: 100%;
+    margin-bottom: -70px;
+}
+
+#content {
+    padding-top: 30px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
