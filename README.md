@@ -1,6 +1,6 @@
 # tayuya-server
 
-Server application to serve [tayuya](https://github.com/vipul-sharma/tayuya) demo.
+Server application to serve [tayuya](https://github.com/vipul-sharma20/tayuya) demo.
 
 Live demo: [midi.vipul.xyz](http://midi.vipul.xyz)
 
